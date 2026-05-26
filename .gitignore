@@ -1,8 +1,9 @@
-# Xmake cache
+# Ignorar o compilador WebAssembly
+emsdk/
+
+# Ignorar as pastas temporárias de build do Xmake
 .xmake/
 build/
 
-# MacOS Cache
-.DS_Store
-
-
+# Ignorar arquivos gerados pelo seu editor (VSCode, etc)
+.vscode/

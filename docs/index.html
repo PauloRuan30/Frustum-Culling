@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Culling Debugger</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: monospace;
+        }
+        canvas.emscripten {
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+
+    <script type='text/javascript'>
+        var Module = {
+            canvas: (function() {
+                var canvas = document.getElementById('canvas');
+                canvas.addEventListener("mouseenter", function() { canvas.focus(); });
+                return canvas;
+            })()
+        };
+    </script>
+
+    <script async type="text/javascript" src="FrustumCulling.js"></script>
+
+</body>
+</html>
