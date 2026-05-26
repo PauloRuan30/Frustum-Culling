@@ -5,7 +5,7 @@
 ![Raylib](https://img.shields.io/badge/Engine-Raylib-FFFFFF?style=for-the-badge)
 ![Xmake](https://img.shields.io/badge/Build-Xmake-222222?style=for-the-badge)
 
-![Showcase](https://raw.githubusercontent.com/username/repository/branch/path/to/thumbnail.jpg)](https://raw.githubusercontent.com/username/repository/branch/path/to/video.mp4)
+[![Watch the video](https://github.com/PauloRuan30/Frustum-Culling/blob/main/thumbnail.png)](https://github.com/PauloRuan30/Frustum-Culling/blob/main/CullingVideo.mp4)
 
 ## 🎯 Overview
 This project visualizes the "invisible" mathematics of 3D rendering. Instead of sending every object in a scene to the GPU, this engine mathematically extracts the 6 planes of the camera's View-Projection matrix and performs real-time intersection tests against Axis-Aligned Bounding Boxes (AABBs). 
