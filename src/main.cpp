@@ -87,32 +87,24 @@ int main() {
 
         // 4. Render 2D UI Overlay
         // Background Panels
-        DrawRectangle(10, 10, 420, 170, Fade(BLACK, 0.8f));
+        DrawRectangle(10, 10, 380, 170, Fade(BLACK, 0.8f));
 
-        // Info Text
         DrawText("VISION CULLING DEBUGGER", 20, 20, 24, WHITE);
         DrawText(TextFormat("Total Objects: %d", sceneManager.GetObjects().size()), 20, 50, 20, LIGHTGRAY);
         DrawText(TextFormat("Objects Passing Render: %d", visibleCount), 20, 80, 20, LIME);
         
-        // Dynamic Controls Display
         DrawText("- WASD + Mouse: Move", 20, 110, 20, LIGHTGRAY);
         Color lockColor = frustumLocked ? YELLOW : LIGHTGRAY;
         DrawText(frustumLocked ? "- [SPACE] UNLOCK Frustum" : "- [SPACE] LOCK Frustum", 20, 140, 20, lockColor);
 
         if (frustumLocked) {
-            DrawText("DEBUG MODE ACTIVE: FRUSTUM FROZEN", 450, 40, 40, RED);
+            DrawText("DEBUG MODE ACTIVE: FRUSTUM FROZEN", 420, 20, 30, RED);
         }
 
-        // 5. Interactive Button: ADD OBJECT
-        Rectangle addButtonBounds = { 10, 190, 180, 50 };
-        if (DrawButton(addButtonBounds, "ADD OBJECT")) {
-            sceneManager.AddObjectAtRandomLocation();
-        }
-
-        // 6. Final Task: Draw Minimap (needs screen dimensions)
+        // 5. Draw Minimap 
         DrawSceneMinimap(sceneManager, camera, lockedVP, screenWidth, screenHeight, minimapTarget);
 
-        DrawFPS(screenWidth - 100, screenHeight - 30);
+        DrawFPS(10, screenHeight - 30);
         EndDrawing();
     }
 

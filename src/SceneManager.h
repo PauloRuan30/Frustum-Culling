@@ -8,7 +8,6 @@ class SceneManager {
 public:
     SceneManager();
     void InitializeGrid(int countX, int countZ, float spacing);
-    void AddObjectAtRandomLocation();
     
     std::vector<BoundingBox>& GetObjects() { return worldObjects; }
 

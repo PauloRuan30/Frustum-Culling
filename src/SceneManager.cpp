@@ -27,15 +27,3 @@ void SceneManager::InitializeGrid(int countX, int countZ, float spacing) {
         }
     }
 }
-
-void SceneManager::AddObjectAtRandomLocation() {
-    float rx = (rand() % 100) - 50.0f; // Random X between -50 and 50
-    float rz = (rand() % 100) - 50.0f; // Random Z between -50 and 50
-    Vector3 center = { rx, 2.0f, rz };
-    
-    BoundingBox box;
-    box.min = { center.x - defaultCubeSize/2, center.y - defaultCubeSize/2, center.z - defaultCubeSize/2 };
-    box.max = { center.x + defaultCubeSize/2, center.y + defaultCubeSize/2, center.z + defaultCubeSize/2 };
-    
-    worldObjects.push_back(box);
-}

@@ -4,8 +4,6 @@
 #include "raylib.h"
 #include "SceneManager.h"
 
-// UI Helpers
-bool DrawButton(Rectangle bounds, const char* text);
 
 // Debug Visualizations
 void DrawFrustumWireframe(Matrix viewProj, Color color);
